@@ -18,7 +18,8 @@ public class Main extends Application {
 
         primaryStage.setScene(scene);
         primaryStage.setTitle("NotesBlok");
-
+        String htmlText = htmlEditor.getHtmlText();
+        System.out.println(htmlText);
         primaryStage.show();
     }
 
