@@ -4,18 +4,19 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.web.*?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <columnConstraints>
-      <ColumnConstraints />
+      <ColumnConstraints/>
    </columnConstraints>
    <rowConstraints>
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
+      <RowConstraints/>
+      <RowConstraints/>
+      <RowConstraints/>
    </rowConstraints>
-   <children>
-      <HTMLEditor htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" prefHeight="240.0" prefWidth="546.0" GridPane.rowIndex="2" />
-      <Button mnemonicParsing="false" text="Button" GridPane.rowIndex="1" />
-      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="53.0" text="Button" />
-   </children>
+   <HTMLEditor
+           htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;"
+           prefHeight="240.0" prefWidth="546.0" GridPane.rowIndex="2"/>
+   <Button mnemonicParsing="false" text="Button" GridPane.rowIndex="1"/>
+   <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="53.0" text="Button"/>
 </GridPane>
