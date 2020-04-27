@@ -18,7 +18,7 @@ public class Main extends Application {
 
         primaryStage.setScene(scene);
         primaryStage.setTitle("NotesBlok");
-        primaryStage.show(); // comment
+        primaryStage.show(); // comment ta
     }
 
 
