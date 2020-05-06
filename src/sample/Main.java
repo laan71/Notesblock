@@ -33,7 +33,7 @@ public class Main extends Application {
                 FileChooser fileChooser = new FileChooser();
 
                 FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter("TXT files", "(*.txt)");
-                extensionFilter().add(extensionFilter);
+                fileChooser.setSelectedExtensionFilter(extensionFilter);
 
                 File file = fileChooser.showSaveDialog(primaryStage);
 
