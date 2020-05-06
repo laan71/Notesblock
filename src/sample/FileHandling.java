@@ -7,7 +7,7 @@ import java.io.IOException;
 // CRUD for notesblock
 public class FileHandling {
 
-    public static void CreateFile(){
+    public static void CreateFile(String fileName){ // FileHandling f = new FileHandling(); f.createFile("Hest.txt"); f.createFile("Ost.html"); 
         try {
             File myObj = new File("filename.txt");
             if (myObj.createNewFile()) {
@@ -32,7 +32,7 @@ public class FileHandling {
         }
     }
 
-    public static void UpdateFile(String[] args) {
+    public static void UpdateFile(String fileName, String fileContent) { // Både filnavn og indhold skal være argument
         try {
             FileWriter myWriter = new FileWriter("filename.txt");
             myWriter.write("java");
