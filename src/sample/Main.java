@@ -32,7 +32,7 @@ public class Main extends Application {
             public void handle(ActionEvent actionEvent) {
                 FileChooser fileChooser = new FileChooser();
 
-                FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)");
+                FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter("TXT files", "(*.txt)");
                 extensionFilter().add(extensionFilter);
 
                 File file = fileChooser.showSaveDialog(primaryStage);
