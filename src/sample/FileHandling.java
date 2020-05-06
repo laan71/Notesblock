@@ -36,14 +36,14 @@ public class FileHandling {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
-     /*   try {
+        try {
 
             FileWriter readFile = new FileWriter(fileName);
 
         } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
-        } */
+        }
     }
 
     public static void updateFile(String fileName, String fileContent) { // Både filnavn og indhold skal være argument

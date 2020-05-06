@@ -8,23 +8,21 @@ import javafx.scene.layout.VBox;
 import javafx.scene.web.HTMLEditor;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-
-import javax.imageio.IIOException;
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Collection;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
+import static sample.FileHandling.*;
+
 
 public class Main extends Application {
 
     HTMLEditor htmlEditor = new HTMLEditor();
 
+
     @Override
     public void start(Stage primaryStage) {
 
         Button button = new Button("Gem");
+
         button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -34,40 +32,20 @@ public class Main extends Application {
                 fileChooser.setSelectedExtensionFilter(extensionFilter);
 
                 File file = fileChooser.showSaveDialog(primaryStage);
-
                 String save = htmlEditor.getHtmlText();
-
-                if (file != null) {
-                    try {
-                        SaveFile(save, file);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                FileHandling createfile = new FileHandling();
+                createFile("pastototre.html");
+                createfile.updateFile("pastototre.html", save);
                 }
-            }
 
-            private Collection<FileChooser.ExtensionFilter> extensionFilter() {
-                return null;
-            }
         });
-
+//pas
         VBox vBox = new VBox(htmlEditor, button);
         Scene scene = new Scene(vBox);
 
         primaryStage.setScene(scene);
         primaryStage.setTitle("NotesBlok");
         primaryStage.show(); // comment tat
-    }
-    private void SaveFile(String content, File file ) throws IOException {
-        try {
-            FileWriter fileWriter = null;
-            fileWriter = new FileWriter(file);
-            fileWriter.write(content);
-            fileWriter.close();
-        } catch (IIOException e) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, e);
-        }
-
     }
 
     public static void main(String[] args) {
