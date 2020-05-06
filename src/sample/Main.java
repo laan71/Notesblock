@@ -20,11 +20,10 @@ import java.util.logging.Logger;
 
 public class Main extends Application {
 
+    HTMLEditor htmlEditor = new HTMLEditor();
+
     @Override
     public void start(Stage primaryStage) {
-
-        HTMLEditor htmlEditor = new HTMLEditor();
-        final String save = htmlEditor.getHtmlText();
 
         Button button = new Button("Gem");
         button.setOnAction(new EventHandler<ActionEvent>() {
@@ -36,6 +35,8 @@ public class Main extends Application {
                 fileChooser.setSelectedExtensionFilter(extensionFilter);
 
                 File file = fileChooser.showSaveDialog(primaryStage);
+
+                String save = htmlEditor.getHtmlText();
 
                 if (file != null) {
                     try {
