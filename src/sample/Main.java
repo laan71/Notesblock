@@ -1,7 +1,10 @@
 package sample;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.scene.web.HTMLEditor;
 import javafx.stage.Stage;
@@ -13,7 +16,15 @@ public class Main extends Application {
 
         HTMLEditor htmlEditor = new HTMLEditor();
 
-        VBox vBox = new VBox(htmlEditor);
+        Button button = new Button("Gem");
+        button.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                // @TODO add logic
+            }
+        });
+
+        VBox vBox = new VBox(htmlEditor, button);
         Scene scene = new Scene(vBox);
 
         primaryStage.setScene(scene);
