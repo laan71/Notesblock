@@ -1,5 +1,4 @@
 package sample;
-
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -31,7 +30,7 @@ public class Main extends Application {
             public void handle(ActionEvent actionEvent) {
                 FileChooser fileChooser = new FileChooser();
 
-                FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter("TXT files", "(*.txt)");
+                FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter("TXT files", "(*.html)");
                 fileChooser.setSelectedExtensionFilter(extensionFilter);
 
                 File file = fileChooser.showSaveDialog(primaryStage);
@@ -52,7 +51,6 @@ public class Main extends Application {
             }
         });
 
-
         VBox vBox = new VBox(htmlEditor, button);
         Scene scene = new Scene(vBox);
 
@@ -72,10 +70,7 @@ public class Main extends Application {
 
     }
 
-
     public static void main(String[] args) {
         launch(args);
     }
-
-
 }
