@@ -25,6 +25,7 @@ public class FileHandling {
         try {
         // @TODO
             FileWriter readFile = new FileWriter("filename.txt");
+
         } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
